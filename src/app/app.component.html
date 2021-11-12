@@ -1,0 +1,208 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="nav navbar-fixed-top py-3">
+    <strong style="text-align:center;">
+      <h2>Real-Time Data of SARS-covid-19</h2>
+    </strong>
+  <!-- <div class="col-sm-3">
+    <button (click) = 'moveToStateComponent()'>State Wise Report of India</button>
+  </div> -->
+</nav>
+<br><br>
+<!-- <div class="container"> -->
+<!-- <div style="text-align:center">
+  <h2 style="color: red; margin-top: 50px;">WORLD COVID-19 DATA </h2>
+  <div class="container worldStat" style="margin-top:30px">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Total Infected: </p>
+          <p class="data">{{allInfo["cases"]}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Cases Today: </p>
+          <p class="data">{{allInfo["todayCases"]}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Total Death:</p>
+          <p class="data">{{allInfo["deaths"]}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Deaths Today: </p>
+          <p class="data">{{allInfo["todayDeaths"]}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Total Cured:</p>
+          <p class="data">{{allInfo["recovered"]}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Cured Today: </p>
+          <p class="data">{{allInfo["todayRecovered"]}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Active Cases:</p>
+          <p class="data">{{allInfo["active"]}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Critical Cases:</p>
+          <p class="data">{{allInfo["critical"]}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Cases/million:</p>
+          <p class="data">{{allInfo["casesPerOneMillion"]}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Deaths/Million:</p>
+          <p class="data">{{allInfo["deathsPerOneMillion"]}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Total Tests:</p>
+          <p class="data">{{allInfo["tests"]}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="box">
+          <p class="head">Tests/Million:</p>
+          <p class="data">{{allInfo["testsPerOneMillion"]}}</p>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+    <hr>
+    <div class="row">
+      <input class="mt-3" type="text" name="country" [(ngModel)]="country"
+        placeholder="Country to be searched..."><br>
+      <button class="btn btn-primary mt-3" (click)="searchCountry()" type="submit">search</button>
+    </div>
+
+    <div class="countryInformation" *ngIf="countryInfo">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="box">
+            <p class="head">Total Infected: </p>
+            <p class="data">{{countryInformation["cases"]}}</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="box">
+            <p class="head">Cases Today:</p>
+            <p class="data">{{countryInformation["todayCases"]}}</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="box">
+            <p class="head">Total Death:</p>
+            <p class="data">{{countryInformation["deaths"]}}</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="box">
+            <p class="head">Deaths Today:</p>
+            <p class="data">{{countryInformation["todayDeaths"]}}</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="box">
+            <p class="head">Total Cured:</p>
+            <p class="data">{{countryInformation["recovered"]}}</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="box">
+            <p class="head">Cured Today:</p>
+            <p class="data">{{countryInformation["todayRecovered"]}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+          <div class="col-md-2">
+            <div class="box">
+              <p class="head">Active Cases:</p>
+                <p class="data">{{countryInformation["active"]}}</p>
+            </div>
+          </div>
+    
+          <div class="col-md-2">
+            <div class="box">
+              <p class="head">Critical Cases:</p>
+                <p class="data">{{countryInformation["critical"]}}</p>
+            </div>
+          </div>
+    
+          <div class="col-md-2">
+            <div class="box">
+              <p class="head">Cases/Million:</p>
+                <p class="data">{{countryInformation["casesPerOneMillion"]}}</p>
+            </div>
+          </div>
+    
+          <div class="col-md-2">
+            <div class="box">
+              <p class="head">Deaths/million:</p>
+                <p class="data">{{countryInformation["deathsPerOneMillion"]}}</p>
+            </div>
+          </div>
+    
+          <div class="col-md-2">
+            <div class="box">
+              <p class="head">Total Tests:</p>
+                <p class="data">{{countryInformation["tests"]}}</p>
+            </div>
+          </div>
+    
+          <div class="col-md-2">
+            <div class="box">
+              <p class="head">Tests/million:</p>
+                <p class="data">{{countryInformation["testsPerOneMillion"]}}</p>              
+            </div>
+          </div>
+
+        </div>
+
+      <div class="row" *ngIf = 'loadChart'>
+        <div id="chart_div"  google-chart [data]="data1.dataTable" [chartType]="data1.chartType" [options]="data1.options"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <router-outlet></router-outlet>
+</div> -->
+<!-- </div> -->
+
+<router-outlet></router-outlet>
